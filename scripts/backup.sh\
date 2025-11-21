@@ -1,0 +1,15 @@
+#!/bin/bash 
+
+
+
+# Scripts to backup a folder 
+
+SOURCE = $1
+BACKUP_DIR="/var/backups/admin"
+sudo mkdir -p $BACKUP_DIR 
+
+if [! -d "$Source does not exist" 
+exit 1
+ fi 
+sudo tar -czf $BACKUP_DIR/backup_$(date +%F_%T).tar.gz $SOURCE
+echo "Backup of $SOURCE created in $BACKUP_DIR"
